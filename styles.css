@@ -1,0 +1,270 @@
+/* Elimina el margen y padding predeterminado de html y body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor flex vertical con letra más grande */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background: url("FondoVerdeagua.png") center center no-repeat fixed;
+    background-size: cover;
+}
+
+/* Header fijo en la parte superior, más delgado */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2E4D3C;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 2px solid #1E3A2C;
+    z-index: 999;
+}
+
+/* Contenedor para centrar logo y texto ECOAWARE */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Tamaño del logo */
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+/* Texto de ECOAWARE */
+.styled-ecoaware {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Estilo de cada letra */
+.letter {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 0.1rem;
+    -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: currentColor;
+}
+
+/* Colores de las letras */
+.letter-green {
+    color: #4CAF50;
+}
+.letter-red {
+    color: #EF5350;
+}
+.letter-blue {
+    color: #26C6DA;
+}
+
+/* Espacio para que el contenido no quede debajo del header */
+.content {
+    flex: 1;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+/* Contenedor más pequeño */
+.container {
+    max-width: 700px; /* Contenedor más compacto */
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(230, 255, 230, 0.9) 100%
+    );
+    border-radius: 8px;
+    border: 1px solid #c0e6c0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    height: 350px; /* Altura fija */
+    overflow: hidden; /* Evita crecimiento del contenedor */
+}
+
+/* Ajuste a una sola columna en pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
+
+/* Sección de descarga de la app con QR */
+.download-app {
+    background-color: #f9fff9;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Imagen del QR más grande y adaptada */
+.download-app img {
+    width: 300px;  /* Imagen del QR ajustada */
+    max-width: 130%;
+    height: auto;
+}
+
+/* Título de la sección QR */
+.download-app h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Párrafo en la sección QR */
+.download-app p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Título de la sección de dispositivos compatibles */
+.main-content h1 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Etiqueta del selector de fabricantes */
+label[for="manufacturerSelect"] {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Estilo del selector de fabricantes */
+#manufacturerSelect {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Etiqueta del selector de Linea de productos */
+label[for="productLineSelect"] {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+/* Estilo del selector de Linea de productos */
+#productLineSelect {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Etiqueta del selector de Modelo del dispositivo */
+label[for="deviceModelSelect"] {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Estilo del selector de Modelo del dispositivo */
+#deviceModelSelect {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/* Efectos hover y focus para el select */
+#manufacturerSelect:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+#manufacturerSelect:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
+/* Lista de dispositivos compatibles */
+#deviceList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 180px; /* Espacio máximo para la lista */
+    overflow-y: auto; /* Scroll cuando hay muchos elementos */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo de cada ítem en la lista de dispositivos */
+#deviceList li {
+    border-bottom: 1px solid #ddd;
+    padding: 6px;
+    color: #333;
+}
+
+/* Asegura que el último elemento no tenga borde inferior */
+#deviceList li:last-child {
+    border-bottom: none;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1E3A2C;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #0D2118;
+    font-size: 0.9rem;
+}

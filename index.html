@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ECOAWARE - Dispositivos Compatibles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="content">
+
+    <header>
+      <div class="logo-container">
+        <img src="Logo.png" alt="Logo ECOAWARE" class="logo">
+        <h1 class="styled-ecoaware">
+          <span class="letter letter-green">E</span>
+          <span class="letter letter-green">C</span>
+          <span class="letter letter-green">O</span>
+          <span class="letter letter-red">A</span>
+          <span class="letter letter-red">W</span>
+          <span class="letter letter-blue">A</span>
+          <span class="letter letter-blue">R</span>
+          <span class="letter letter-red">E</span>
+        </h1>
+      </div>
+    </header>
+
+    <div class="container">
+      
+      <article class="download-app">
+        <h2>Descargar Aplicación</h2>
+        <p>Escanea el siguiente código QR o da clic para ir a nuestro sitio:</p>
+        <a href="https://drive.google.com/drive/folders/1pv4YBgkq4VsX3fjHbe1bI_EFvv51TDG3?usp=sharing" target="_blank">
+          <img src="QR.png" alt="Código QR">
+        </a>
+        <p>¡Accede a nuestra app ahora!</p>
+      </article>
+
+      <section class="main-content">
+        <h1>Dispositivos Compatibles</h1>
+
+        <label for="manufacturerSelect">Seleccione un fabricante:</label>
+        <select id="manufacturerSelect">
+          <option value="" selected>-- Seleccione un fabricante --</option>
+        </select>
+
+        <label for="productLineSelect">Seleccione una línea de producto:</label>
+        <select id="productLineSelect" disabled>
+          <option value="" selected>-- Seleccione una línea de producto --</option>
+        </select>
+
+        <label for="deviceModelSelect">Seleccione un modelo:</label>
+        <select id="deviceModelSelect" disabled>
+          <option value="" selected>-- Seleccione un modelo --</option>
+        </select>
+
+        <ul id="deviceList"></ul>
+      </section>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p>ECOAWARE &copy; 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
